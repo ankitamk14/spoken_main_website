@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from spoken import views
+from django.urls import include
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$',include('spoken.urls'))
 ]
